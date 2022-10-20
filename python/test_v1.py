@@ -14,14 +14,6 @@ from matplotlib import pyplot as plt
 from my_monte_carlo import MonteCarlo
 from my_quantum_system import *
 
-def data_embedding(sample_init, x_train, npart, ndim=3):
-    shifted_sample = []
-    for i in range(len(x_train)):
-        #gates.shift_gate(tf.ones(2*npart*ndim, dtype='double')*tf.constant(x_train)[i], npart, ndim)
-        shifted_sample += [sample_init + tf.constant(x_train[i])]
-    return shifted_sample
-
-
 
 #
 # Testing
@@ -52,7 +44,7 @@ print("number of particle:", npart, "\nnumber of dimension:", ndim)
 print("omegas:", psi_args['oms'])
 
 # Constants
-N = 10000
+N = 10000 # number of samples (?)
 strength = 0.0
 m = 1.0
 
