@@ -16,7 +16,7 @@ class MonteCarlo():
         rhoold2 = self.rho(psi, rs, psi_args)
         p1 = complex(0.,0.)
         p2 = 0.0
-        p_arr = np.zeros((npart,ndim),dtype=complex)
+        p_arr = np.zeros((npart,ndim), dtype=complex)
         hbar = 1.0
         for ipart in range(npart):
             dif1 = 0.0
@@ -56,7 +56,7 @@ class MonteCarlo():
         iacc, Nsample = 0, 0
         ERp = np.zeros((Ncal, npart, ndim))
         ERq = np.zeros((Ncal, npart, ndim))
-        for itot in range (nm*Ncal):
+        for itot in range(nm*Ncal):
             rnews = rolds + th*np.random.uniform(-1,1,(npart, ndim))
             psinew = psi(rnews, **psi_args)
             psiratio = (psinew/psiold)**2
@@ -70,5 +70,7 @@ class MonteCarlo():
                 ERq[Nsample, :, :] = rolds
                 ERp[Nsample, :, :] = self.ERmom(psi, rolds, psi_args, s)
                 Nsample += 1
+
+        # XXX: Fix for ComplexWarning: Casting complex values to real discards the imaginary part
         return rolds, Nsample, ERp, ERq
 

@@ -6,7 +6,7 @@ np_config.enable_numpy_behavior()
 
 from my_utils import utils
 
-class quantum_system():
+class QuantumSystem():
 
     def __init__(self, N, npart, ndim,
                list_of_operations, list_of_bs_pair=[],
@@ -68,6 +68,10 @@ class quantum_system():
         # Initialize operators
         self.operators = self.operators_init()
         # Apply transformations
-        self.q_new, self.p_new = utils.qp_transformation(self.list_of_operations, self.list_of_bs_pair,
-                                self.operators, self.q_init, self.p_init, self.N, self.npart, self.ndim)
+        self.q_new, self.p_new = utils.qp_transformation(
+            self.list_of_operations, self.list_of_bs_pair,
+            self.operators,
+            self.q_init, self.p_init,
+            self.N, self.npart, self.ndim)
+        # Will return a hamiltonian
         return self.hamiltonian(self.q_new, self.p_new, **self.hamiltonian_args)

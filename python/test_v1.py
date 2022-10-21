@@ -94,7 +94,7 @@ list_of_bs_pair = [
 ]
 
 # Object declaration
-bosonic_system = quantum_system(
+bosonic_system = QuantumSystem(
     N, npart, ndim, list_of_operations, list_of_bs_pair,
     psi, psi_args, bosonic_hamiltonian, hamiltonian_args,
     sampler,
