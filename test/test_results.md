@@ -59,7 +59,7 @@ Optimized variables: [0.99472196 0.89230921 0.8691364  1.0825467  1.07135023 1.0
  0.89269354 0.95853625 0.97928084]
  
 **Energy min: 1.5008136488244226** \
-**Exact / theoretical value = 1.5 ** \
+**Exact / theoretical value = 1.5** \
 Found in 1287 optimization steps.
 
 
