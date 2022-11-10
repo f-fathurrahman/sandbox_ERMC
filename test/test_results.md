@@ -5,7 +5,7 @@ Number of sample (N) = 100000  \
 Number of particle (npart) = 1 \
 Degree of freedom (DoF) = 3
 
-Hamiltonian of the system (Mittal et.el, 2020) \
+Hamiltonian of the system (Mittal et.al, 2020) \
 $H= \frac{p^2}{2m} + \frac{1}{2} m\omega^2 q^2+\lambda q^4$  
 
 Trial wave function \
@@ -65,7 +65,7 @@ Found in 1287 optimization steps.
 
 Anharmonic Oscillator ($\lambda \neq 0$)
 
-$\lambda = 1 $, E_min reference = $3 \times  0.8038 = 2,4114$ (Mittal et.el, 2020)
+$\lambda = 1 $, E_min reference = $3 \times  0.8038 = 2,4114$ (Mittal et.al, 2020)
 
 1-Layer
 
